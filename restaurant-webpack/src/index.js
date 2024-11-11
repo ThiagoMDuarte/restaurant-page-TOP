@@ -26,6 +26,6 @@ function elementFactory(type,id,text) {
     const el = document.createElement(type)
     el.innerText = text
     el.id = id
-    contentDiv.appendChild(el)git add .add
+    contentDiv.appendChild(el)
     return el
 }
