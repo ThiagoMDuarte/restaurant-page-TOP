@@ -1,10 +1,4 @@
 /* 
-HOME TAB
-    Nome do Restaurante
-    Texto sobre o restaurante
-    Horario de funcionamento
-    Local
-
 MENU TAB
     menu
     categoria do prato (bebidas - entrada - principal)
@@ -29,3 +23,20 @@ function elementFactory(type,id,text) {
     contentDiv.appendChild(el)
     return el
 }
+
+function HomeTab () {
+    /* HOME TAB
+    Nome do Restaurante
+    Texto sobre o restaurante
+    Horario de funcionamento
+    Local */
+    const restaurantNameDiv = elementFactory('div','restaurant-name','NOME DO RESTAURANTE')
+
+    const restaurantText = elementFactory('div','restaurant-text','RESTAURANTE MUITO BOM!')
+
+    const restaurantHour = elementFactory('div','restaurant-hour','12H - 18H')
+
+    const restaurantLocal = elementFactory('div','restaurant-local','RUA DOS RESTAURANTE 123')
+
+}
+HomeTab()
