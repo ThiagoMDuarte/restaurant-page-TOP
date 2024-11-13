@@ -1,13 +1,3 @@
-/* 
-
-
-ABOUT TAB
-    about
-    contato
-        nome
-        numero
-        email
-*/
 const contentDiv = document.querySelector('#content')
 
 function elementFactory(type,id,text) {
@@ -18,11 +8,7 @@ function elementFactory(type,id,text) {
 }
 
 function HomeTab () {
-    /* HOME TAB
-    Nome do Restaurante
-    Texto sobre o restaurante
-    Horario de funcionamento
-    Local */
+
     const restaurantNameDiv = elementFactory('div','restaurant-name','NOME DO RESTAURANTE')
 
     const restaurantText = elementFactory('div','restaurant-text','RESTAURANTE MUITO BOM!')
@@ -39,12 +25,7 @@ function HomeTab () {
 }
 
 function MenuTab () {
-    /* MENU TAB
-    menu
-    categoria do prato (bebidas - entrada - principal)
-        H- nome
-        P- descricao
-        P- valor */
+
     const restaurantMenuDiv = elementFactory('div','restaurant-menu','MENU')
 
     const restaurantDrinksDiv = elementFactory('div','food-category-bebida','BEBIDAS')
@@ -64,6 +45,23 @@ function MenuTab () {
             restaurantMenuDiv,
             restaurantDrinksDiv)
     
+}
+
+function AboutTab() {
+
+    const aboutTab = elementFactory('div','restaurant-about','ABOUT')
+
+    const contact = elementFactory('div','restaurant-contact','CHEF CONTACT')
+
+    const contactName = elementFactory('p','restaurant-contact-name','CONTACT NAME: COOL NAME')
+
+    const contactNum = elementFactory('p','restaurant-contact-num','CONTACT NUMBER: 99 99999999')
+
+    const contactEmail = elementFactory('p','restaurant-contact-EMAIL','CONTACT EMAIL: TESTE-EMAIL@EMAIL.COM')
+
+    contact.append(contactName,contactNum,contactEmail)
+
+    contentDiv.append(aboutTab,contact)
 }
 
 HomeTab()
