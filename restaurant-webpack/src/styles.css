@@ -1,3 +1,14 @@
-body {
-    background-color: rebeccapurple;
-  }
+* {
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  width: 80 vw;
+  text-align: center;
+}
+nav {
+  display: flex;
+  color: red;
+  justify-content: space-evenly;
+  align-content: center;
+}

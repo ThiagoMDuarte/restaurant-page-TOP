@@ -8,7 +8,7 @@ function elementFactory(type,id,text) {
 }
 
 function HomeTab () {
-
+    contentDiv.innerHTML = ''
     const restaurantNameDiv = elementFactory('div','restaurant-name','NOME DO RESTAURANTE')
 
     const restaurantText = elementFactory('div','restaurant-text','RESTAURANTE MUITO BOM!')
@@ -25,6 +25,7 @@ function HomeTab () {
 }
 
 function MenuTab () {
+    contentDiv.innerHTML = ''
 
     const restaurantMenuDiv = elementFactory('div','restaurant-menu','MENU')
 
@@ -36,6 +37,19 @@ function MenuTab () {
 
     const drink1OptionPrice = elementFactory('p','drink-price','$ 15.00')
 
+    const restaurantFoodsDiv = elementFactory('div','food-category-entrada','ENTRADAS')
+
+    const food1OptionTitle = elementFactory('h1','food-title','FOOD TITLE')
+
+    const food1OptionDescript = elementFactory('p','food-descript','FOOD DESCRIPTION BETTER FOOD!')
+
+    const food1OptionPrice = elementFactory('p','food-price','$ 35.00')
+
+    restaurantFoodsDiv.append(
+        food1OptionTitle,
+        food1OptionDescript,
+        food1OptionPrice)
+
     restaurantDrinksDiv.append(
             drink1OptionTitle,
             drink1OptionDescript,
@@ -43,11 +57,13 @@ function MenuTab () {
 
     contentDiv.append(
             restaurantMenuDiv,
-            restaurantDrinksDiv)
+            restaurantDrinksDiv,
+            restaurantFoodsDiv)
     
 }
 
 function AboutTab() {
+    contentDiv.innerHTML = ''
 
     const aboutTab = elementFactory('div','restaurant-about','ABOUT')
 
@@ -63,5 +79,15 @@ function AboutTab() {
 
     contentDiv.append(aboutTab,contact)
 }
+// LINKAR AS FUNÇÕES COM CADA DIV NAV
 
-HomeTab()
+const homeButton = document.querySelector('#home')
+homeButton.addEventListener('click',HomeTab)
+
+const menuButton = document.querySelector('#menu')
+menuButton.addEventListener('click',MenuTab)
+
+const aboutButton = document.querySelector('#about')
+aboutButton.addEventListener('click',AboutTab)
+
+import './styles.css';
