@@ -90,4 +90,6 @@ menuButton.addEventListener('click',MenuTab)
 const aboutButton = document.querySelector('#about')
 aboutButton.addEventListener('click',AboutTab)
 
+HomeTab()
+
 import './styles.css';
